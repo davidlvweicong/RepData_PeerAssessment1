@@ -30,7 +30,7 @@ Sys.setlocale("LC_TIME", "C")
 
 ```r
 totalsteps <- tapply(data1$steps, data1$date, sum)
-barplot(totalsteps, xlab = "Date", ylab = "Total number of steps")
+hist(totalsteps)
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
@@ -96,7 +96,7 @@ for (i in 1: nrow(data2))
 
 ```r
 totalsteps <- tapply(data2$steps, data2$date, sum)
-barplot(totalsteps, xlab = "Date", ylab = "Total number of steps")
+hist(totalsteps)
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 

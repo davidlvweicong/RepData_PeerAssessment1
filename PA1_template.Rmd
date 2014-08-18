@@ -22,7 +22,7 @@ Sys.setlocale("LC_TIME", "C")
 - Make a histogram of the total number of steps taken each day  
 ```{r}
 totalsteps <- tapply(data1$steps, data1$date, sum)
-barplot(totalsteps, xlab = "Date", ylab = "Total number of steps")
+hist(totalsteps)
 ```
 
 - Calculate and report the mean and median total number of steps taken per day  
@@ -62,7 +62,7 @@ for (i in 1: nrow(data2))
 - Make a histogram of the total number of steps taken each day and calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?  
 ```{r}
 totalsteps <- tapply(data2$steps, data2$date, sum)
-barplot(totalsteps, xlab = "Date", ylab = "Total number of steps")
+hist(totalsteps)
 list(mean = mean(totalsteps), median = median(totalsteps))
 ```
 The mean stays the same, but the median becomes slightly larger.  
